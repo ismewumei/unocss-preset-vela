@@ -73,6 +73,16 @@ export const variantBreakpoints: Variant<Theme> = {
           }),
         }
       }
+      if(['watch','band','smartspeaker'].includes(size+'')){
+        return {
+          matcher: m,
+          handle: (input, next) => next({
+            ...input,
+            parent: `${input.parent ? `${input.parent} $$ ` : ''}@media (device-type: ${size})`,
+            parentOrder: order,
+          }),
+        }
+      }
       return {
         matcher: m,
         handle: (input, next) => next({

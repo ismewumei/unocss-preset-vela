@@ -12,6 +12,9 @@ export const breakpoints = {
   'cs': 'circle',
   'rs': 'rect',
   'ps': 'pill-shaped',
+  'watch':'watch',
+  'band':'band',
+  'smartspeaker':'smartspeaker'
 }
 
 export const verticalBreakpoints = { ...breakpoints }
