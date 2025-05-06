@@ -1,0 +1,73 @@
+{
+  "name": "unocss-preset-vela",
+  "version": "0.0.1",
+  "description": "The UnoCSS preset for Vela Quickjs App",
+  "author": "ismewumei <1124939193@qq.com>",
+  "license": "MIT",
+  "funding": "",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "keywords": [
+    "unocss",
+    "unocss-preset"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./theme": {
+      "types": "./dist/theme.d.ts",
+      "require": "./dist/theme.cjs",
+      "import": "./dist/theme.mjs"
+    },
+    "./variants": {
+      "types": "./dist/variants.d.ts",
+      "require": "./dist/variants.cjs",
+      "import": "./dist/variants.mjs"
+    },
+    "./rules": {
+      "types": "./dist/rules.d.ts",
+      "require": "./dist/rules.cjs",
+      "import": "./dist/rules.mjs"
+    },
+    "./colors": {
+      "types": "./dist/colors.d.ts",
+      "require": "./dist/colors.cjs",
+      "import": "./dist/colors.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "require": "./dist/utils.cjs",
+      "import": "./dist/utils.mjs"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "uno": "unocss 'src/**/*.ux' --out-file=src/common/style/unocss-vela.css --watch"
+  },
+  "dependencies": {
+    "@unocss/core": "0.54.3"
+  },
+  "devDependencies": {
+    "@unocss/preset-rem-to-px": "^0.55.0",
+    "unbuild": "^1.2.1"
+  }
+}
